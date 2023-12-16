@@ -1,0 +1,54 @@
+package entity;
+
+public class Electronics extends Product {
+    private String brand;
+    private int warrantyPeriod;
+
+    // Default constructor
+    public Electronics() {
+        // Call the default constructor of the superclass (Product)
+        super();
+    }
+
+    // Parameterized constructor
+    public Electronics(int productId, String productName, String description, double price,
+                       int quantityInStock, String type, String brand, int warrantyPeriod) {
+        // Call the parameterized constructor of the superclass (Product)
+        super(productId, productName, description, price, quantityInStock, type);
+        this.brand = brand;
+        this.warrantyPeriod = warrantyPeriod;
+    }
+
+    // Getters and setters specific to Electronics
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getWarrantyPeriod() {
+        return warrantyPeriod;
+    }
+
+    public void setWarrantyPeriod(int warrantyPeriod) {
+        this.warrantyPeriod = warrantyPeriod;
+    }
+
+    // toString method for better representation
+    @Override
+    public String toString() {
+        return "Electronics{" +
+                "productId=" + getProductId() +
+                ", productName='" + getProductName() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", price=" + getPrice() +
+                ", quantityInStock=" + getQuantityInStock() +
+                ", type='" + getType() + '\'' +
+                ", brand='" + brand + '\'' +
+                ", warrantyPeriod=" + warrantyPeriod +
+                '}';
+    }
+}
+
